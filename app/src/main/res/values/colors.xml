@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Primario">#000000</color>
+    <color name="hingt">#353535</color>
+    <color name="borderColor">#38761D</color>
+    <color name="fondo">#232323</color>
+    <color name="color_del_borde">#487336</color>
+    <color name="fondotexto">#34070707</color>
+    <color name="green">#49835b</color>
+    <color name="palo">#51C174</color>
+    <color name="tu_color_de_fondo_presionado">#C6FF00</color>
+    <color name="tu_color_de_fondo_normal">#FF3D00</color>
+</resources>
