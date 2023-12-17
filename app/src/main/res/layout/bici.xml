@@ -20,15 +20,23 @@
                 android:id="@+id/webView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
             </WebView>
+            <TextView
+                android:id="@+id/textViewError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="No se pudo cargar la página. Verifica tu conexión a Internet."
+                android:visibility="invisible"
+                android:textColor="#FF0000"
+                android:gravity="center" />
 
         </LinearLayout>
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/barraprincipal"
             android:layout_width="match_parent"
-            android:layout_height="109dp"
+            android:layout_height="127dp"
             android:background="@color/Primario"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"

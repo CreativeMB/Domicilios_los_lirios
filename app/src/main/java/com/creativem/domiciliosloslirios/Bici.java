@@ -7,8 +7,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -21,8 +26,14 @@ public class Bici extends AppCompatActivity {
         setContentView(R.layout.bici);
 
         webView = findViewById(R.id.webView);
-
         FloatingActionButton fabButton2 = findViewById(R.id.Button_2);
+        webView.setWebViewClient(new MyWebViewClient());
+        FloatingActionButton fabButton = findViewById(R.id.Button_w);
+        WebSettings webSettings = webView.getSettings();
+
+        // Configuración del WebView
+        webSettings.setJavaScriptEnabled(true); // Habilitar JavaScript si es necesario
+        webSettings.setBuiltInZoomControls(true); // Habilitar controles de zoom si es necesario
         fabButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,9 +41,6 @@ public class Bici extends AppCompatActivity {
                 reiniciarActivity();
             }
         });
-
-        FloatingActionButton fabButton = findViewById(R.id.Button_w);
-
 
         fabButton.setOnClickListener(view -> {
             try {
@@ -51,18 +59,23 @@ public class Bici extends AppCompatActivity {
             }
         });
 
-
-        // Configuración del WebView
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true); // Habilitar JavaScript si es necesario
-        webSettings.setBuiltInZoomControls(true); // Habilitar controles de zoom si es necesario
-
         // Cargar la página web
         String url = "https://trello.com/b/HbeHuCrq/entrega-bici"; // Reemplaza con la URL de tu página web
         webView.loadUrl(url);
     }
 
+    private class MyWebViewClient extends WebViewClient {
+        @Override
+        public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
 
+            TextView textViewError = findViewById(R.id.textViewError);
+            textViewError.setVisibility(TextView.VISIBLE);
+            webView.setVisibility(WebView.GONE);
+            // Muestra un mensaje si hay un error al cargar la página
+            Toast.makeText(Bici.this, "Verifica su conexión a Internet para ver los domicilios de floristeria los liros.", Toast.LENGTH_LONG).show();
+        }
+
+    }
     // Método para reiniciar la actividad
     private void reiniciarActivity() {
         Intent intent = getIntent();
