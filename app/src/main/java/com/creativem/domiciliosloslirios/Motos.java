@@ -77,7 +77,7 @@ public class Motos extends AppCompatActivity {
             textViewError.setVisibility(TextView.VISIBLE);
             webView.setVisibility(WebView.GONE);
             // Muestra un mensaje si hay un error al cargar la página
-            Toast.makeText(Motos.this, "Verifica su conexión a Internet para ver los domicilios de floristeria los liros.", Toast.LENGTH_LONG).show();
+            Toast.makeText(Motos.this, "Verifica su conexión a Internet para ver los domicilios de floristeria los lirios.", Toast.LENGTH_LONG).show();
         }
 
 
