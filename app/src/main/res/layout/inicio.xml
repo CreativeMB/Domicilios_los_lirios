@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Inicio">
+
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/barraprincipal"
         android:layout_width="match_parent"
@@ -12,35 +14,35 @@
         android:background="@color/Primario"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="wrap_content"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="¿que transporte usas?"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:text="Bienvenido a domicilio los lirios Seleciona una categoria"
+            android:textColor="@color/borderColor"
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/btn_menu"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_gravity="end"
             android:background="#00FFFFFF"
             android:foreground="@drawable/cabesera2" />
 
     </androidx.appcompat.widget.Toolbar>
 
-
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/fondo"
+        android:background="@drawable/fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
@@ -56,7 +58,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/uno"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="220dp"
                 android:layout_margin="@dimen/md"
                 android:background="@color/black"
                 app:cardCornerRadius="10dp"
@@ -70,21 +72,33 @@
                     <ViewFlipper
                         android:id="@+id/bici_slider"
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
+                        android:layout_height="220dp"
                         android:background="@drawable/view_radio"
                         android:backgroundTint="@color/borderColor">
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="200dp"
+                            android:layout_height="220dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/moto1" />
+                            android:src="@drawable/motos1"/>
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="200dp"
+                            android:layout_height="220dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/moto2" />
+                            android:src="@drawable/motos2"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/moto3"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/moto4"/>
 
 
                     </ViewFlipper>
@@ -93,9 +107,9 @@
                         android:id="@+id/moto"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/fondotexto"
+                        android:background="#4D070707"
                         android:gravity="center"
-                        android:text="Domicilio en moto"
+                        android:text="Moto o Carro"
                         android:textColor="@color/white"
                         android:textSize="30sp"
                         android:textStyle="bold" />
@@ -106,7 +120,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/uno5"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="220dp"
                 android:layout_margin="@dimen/md"
                 android:background="@color/black"
                 app:cardCornerRadius="10dp"
@@ -115,30 +129,42 @@
                 <ViewFlipper
                     android:id="@+id/moto_slider"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="220dp"
                     android:background="@drawable/view_radio"
                     android:backgroundTint="@color/borderColor">
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="220dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/bici1" />
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="220dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/bici2" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bici3" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bici4" />
                 </ViewFlipper>
 
                 <TextView
                     android:id="@+id/bici"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/fondotexto"
+                    android:background="#4D070707"
                     android:gravity="center"
-                    android:text="Domicilio en Bici"
+                    android:text="Bicicleta"
                     android:textColor="@color/white"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -147,13 +173,11 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/tar"/>
+                android:src="@drawable/tar" />
 
 
         </LinearLayout>
     </ScrollView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
